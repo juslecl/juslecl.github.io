@@ -74,25 +74,20 @@ block (--c-general, --c-pub, etc). Change the
     height:100vh;
   }
 
-  .avatar{
-    width: 132px;
-    height: 132px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--c-general), var(--c-talks));
+.avatar{
+    width:132px;
+    height:132px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:linear-gradient(135deg, var(--c-general), var(--c-talks));
     display:flex;
     align-items:center;
     justify-content:center;
-    color:white;
-    font-family:'Space Grotesk', sans-serif;
-    font-size: 2.6rem;
-    font-weight:600;
     overflow:hidden;
-    border: 4px solid var(--paper);
-    box-shadow: 0 0 0 2px var(--line);
-  }
-  /* EDIT ME: replace the div above with your photo, e.g.
-     <img src="your-photo.jpg" alt="Your Name" style="width:100%;height:100%;object-fit:cover;">
-     inside a div with class="avatar" (keep the class for the circular shape). */
+    border:4px solid var(--paper);
+    box-shadow:0 0 0 2px var(--line);
+    margin:0 auto 25px;
+}
   .avatar img{ width:100%; height:100%; object-fit:cover; }
 
   .id-block h1{ font-size: 1.5rem; }
