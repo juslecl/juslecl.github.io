@@ -25,6 +25,7 @@
     --line:       #E4E2D9;
 
     --c-general:  #FF6B5A; /* coral   */
+    --c-cv:       #3B82F6; /* blue    */
     --c-pub:      #14B8A6; /* teal    */
     --c-talks:    #8B5CF6; /* violet  */
     --c-teach:    #F59E0B; /* amber   */
@@ -142,6 +143,7 @@
     transform: scale(1.15);
   }
   nav.tabs button[data-tab="general"]{ --tab-color: var(--c-general); }
+  nav.tabs button[data-tab="CV"]{ --tab-color: var(--c-cv); }
   nav.tabs button[data-tab="publications"]{ --tab-color: var(--c-pub); }
   nav.tabs button[data-tab="talks"]{ --tab-color: var(--c-talks); }
   nav.tabs button[data-tab="teaching"]{ --tab-color: var(--c-teach); }
@@ -253,6 +255,9 @@
     border-bottom: 1px solid transparent;
   }
   .pub-links a:hover{ border-color: var(--c-pub); }
+
+  /* CV tab reuses the .pub-item row layout, with its own accent color */
+  section[data-panel="CV"] .pub-year{ color: var(--c-cv); }
 
   /* Talks tab */
   .talk-item{
