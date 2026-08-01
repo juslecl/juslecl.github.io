@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Justine Leclerc — Academic Website</title>
- 
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
- 
+
 <!-- =======================================================================
      Site styles — colors, type, and layout for the tabbed academic page.
      1. Edit the palette in :root below to re-theme the whole site.
@@ -23,20 +23,20 @@
     --ink:        #1B1B1F;
     --ink-soft:   #5B5A63;
     --line:       #E4E2D9;
- 
+
     --c-general:  #FF6B5A; /* coral   */
     --c-pub:      #14B8A6; /* teal    */
     --c-talks:    #8B5CF6; /* violet  */
     --c-teach:    #F59E0B; /* amber   */
     --c-hobby:    #EC4899; /* magenta */
- 
+
     --accent: var(--c-general);
     --radius: 18px;
   }
- 
+
   *{ box-sizing: border-box; }
   html,body{ margin:0; padding:0; }
- 
+
   body{
     background: var(--paper);
     color: var(--ink);
@@ -44,21 +44,21 @@
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
- 
+
   h1,h2,h3{
     font-family: 'Space Grotesk', 'Inter', sans-serif;
     letter-spacing: -0.02em;
     margin: 0 0 .4em 0;
   }
- 
+
   .mono{
     font-family: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
     font-size: 0.78rem;
     letter-spacing: 0.02em;
   }
- 
+
   a{ color: inherit; text-decoration: none; }
- 
+
   /* ---------- Layout shell ---------- */
   .shell{
     display:flex;
@@ -66,7 +66,7 @@
     max-width: 1180px;
     margin: 0 auto;
   }
- 
+
   /* ---------- Sidebar ---------- */
   .sidebar{
     width: 300px;
@@ -77,7 +77,7 @@
     gap: 28px;
     border-right: 1px solid var(--line);
   }
- 
+
 .avatar{
     width:132px;
     height:132px;
@@ -93,7 +93,7 @@
     margin:0 auto 25px;
 }
   .avatar img{ width:100%; height:100%; object-fit:cover; }
- 
+
   .id-block h1{ font-size: 1.5rem; }
   .id-block .role{
     color: var(--ink-soft);
@@ -105,7 +105,7 @@
     font-size: 0.85rem;
     margin-top: 6px;
   }
- 
+
   nav.tabs{
     display:flex;
     flex-direction:column;
@@ -148,7 +148,7 @@
   nav.tabs button[data-tab="hobbies"]{ --tab-color: var(--c-hobby); }
   nav.tabs button.active{ color: var(--tab-color); }
   nav.tabs button.active .dot{ background: var(--tab-color); }
- 
+
   .social{
     margin-top: auto;
     display:flex;
@@ -170,14 +170,14 @@
     transition: border-color .15s ease, color .15s ease;
   }
   .social a:hover{ border-color: var(--accent); color: var(--accent); }
- 
+
   /* ---------- Main content ---------- */
   main{
     flex:1;
     padding: 56px 48px 80px;
     min-width:0;
   }
- 
+
   .eyebrow{
     display:inline-flex;
     align-items:center;
@@ -187,7 +187,7 @@
     margin-bottom: 10px;
   }
   .eyebrow .dot{ width:9px; height:9px; border-radius:50%; background:var(--accent); }
- 
+
   section.panel{ display:none; }
   section.panel.active{
     display:block;
@@ -200,10 +200,10 @@
   @media (prefers-reduced-motion: reduce){
     section.panel.active{ animation:none; }
   }
- 
+
   .panel > h2{ font-size: 2rem; }
   .panel > .sub{ color: var(--ink-soft); max-width: 620px; margin-bottom: 32px; }
- 
+
   /* General tab */
   .about-grid{
     display:grid;
@@ -228,7 +228,7 @@
     border: 1px solid var(--line);
     color: var(--ink-soft);
   }
- 
+
   /* Publications tab */
   .pub-item{
     display:grid;
@@ -253,7 +253,7 @@
     border-bottom: 1px solid transparent;
   }
   .pub-links a:hover{ border-color: var(--c-pub); }
- 
+
   /* Talks tab */
   .talk-item{
     display:flex;
@@ -276,7 +276,7 @@
   }
   .talk-item h3{ font-size: 1.0rem; }
   .talk-meta{ color: var(--ink-soft); font-size: 0.85rem; }
- 
+
   /* Teaching tab */
   .teach-grid{
     display:grid;
@@ -293,7 +293,7 @@
   .teach-card h3{ font-size: 1rem; }
   .teach-card .role{ font-size: 0.8rem; color: var(--c-teach); font-weight:600; margin-bottom:6px; }
   .teach-card p{ color: var(--ink-soft); font-size: 0.88rem; margin: 0; }
- 
+
   /* Hobbies tab */
   .hobby-grid{
     display:grid;
@@ -323,7 +323,7 @@
   .hobby-card.c2::before{ background: linear-gradient(160deg, var(--c-teach), var(--c-general)); }
   .hobby-card.c3::before{ background: linear-gradient(160deg, var(--c-pub), var(--c-talks)); }
   .hobby-card.c4::before{ background: linear-gradient(160deg, var(--c-general), var(--c-hobby)); }
- 
+
   /* ---------- Mobile ---------- */
   @media (max-width: 820px){
     .shell{ flex-direction:column; }
@@ -356,7 +356,7 @@
 </style>
 </head>
 <body>
- 
+
 <div class="shell">
 
   <!-- ============================ SIDEBAR ============================ -->
@@ -393,7 +393,7 @@
 
     <!-- ---------- GENERAL ---------- -->
     <section class="panel active" data-panel="general">
-      <h1>Hallo mitenand!</h1>
+      <h2>Hallo mitenand!</h2>
 
       <div class="about-grid">
         <div class="card">
@@ -424,46 +424,72 @@
 
     <!-- ---------- CV ---------- -->
     <section class="panel" data-panel="CV">
-      <h1>Curriculum Vitae</h1>
+      <h2>Curriculum Vitae</h2>
+      <p class="sub">Education</p>
 
-      <div class="card">
-        <h2>Education</h2>
-
-        <h3>PhD in Epidemiology &amp; Biostatistics</h3>
-        <p>UZH / USZ · Present</p>
-
-        <h3>MSc in Statistics</h3>
-        <p>ETH Zürich (D-MATH) · 2023–2025</p>
-
-        <h3>Erasmus Exchange</h3>
-        <p>Universität Wien, Faculty of Business, Economics and Statistics · 2022–2023</p>
-
-        <h3>BSc in Applied Mathematics (Honors)</h3>
-        <p>Paris I Panthéon-Sorbonne · 2020–2023</p>
-
-        <h3>BA in Social Sciences (Cum Laude)</h3>
-        <p>Sciences Po Paris · 2020–2023</p>
-        <p><em>Major in Economics and Sociology.</em></p>
-
-        <h3>Baccalauréat (Highest Honors, 19.37/20)</h3>
-        <p>Lycée Louis-le-Grand, Paris · 2020</p>
-        <p><em>Major in Mathematics and Physics.</em></p>
-
-        <div class="card">   
-        <h2 style="margin-top:20px;">Languages</h2>
-        <div class="badge-row">
-          <span class="badge">French — Native</span>
-          <span class="badge">English — C1</span>
-          <span class="badge">German — C1</span>
-          <span class="badge">Italian — C2</span>
+      <div class="pub-item">
+        <div class="pub-year mono">Present</div>
+        <div>
+          <h3>PhD in Epidemiology &amp; Biostatistics</h3>
+          <div class="pub-venue mono">UZH / USZ</div>
         </div>
       </div>
-     </div>
+
+      <div class="pub-item">
+        <div class="pub-year mono">2023–2025</div>
+        <div>
+          <h3>MSc in Statistics</h3>
+          <div class="pub-venue mono">ETH Zürich (D-MATH)</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year mono">2022–2023</div>
+        <div>
+          <h3>Erasmus Exchange</h3>
+          <div class="pub-venue mono">Universität Wien, Faculty of Business, Economics and Statistics</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year mono">2020–2023</div>
+        <div>
+          <h3>BSc in Applied Mathematics (Honors)</h3>
+          <div class="pub-venue mono">Paris I Panthéon-Sorbonne</div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year mono">2020–2023</div>
+        <div>
+          <h3>BA in Social Sciences (Cum Laude)</h3>
+          <div class="pub-venue mono">Sciences Po Paris</div>
+          <div class="pub-authors"><em>Major in Economics and Sociology.</em></div>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-year mono">2020</div>
+        <div>
+          <h3>Baccalauréat (Highest Honors, 19.37/20)</h3>
+          <div class="pub-venue mono">Lycée Louis-le-Grand, Paris</div>
+          <div class="pub-authors"><em>Major in Mathematics and Physics.</em></div>
+        </div>
+      </div>
+
+      <p class="sub" style="margin-top:32px; margin-bottom:12px;">Languages</p>
+      <div class="badge-row">
+        <span class="badge">French — Native</span>
+        <span class="badge">English — C1</span>
+        <span class="badge">German — C1</span>
+        <span class="badge">Italian — C2</span>
+      </div>
     </section>
 
     <!-- ---------- PUBLICATIONS ---------- -->
     <section class="panel" data-panel="publications">
-      <h1>Publications</h1>
+      <h2>Publications</h2>
+      <p class="sub">Accepted papers</p>
 
       <!-- Duplicate this .pub-item block for each publication -->
       <div class="pub-item">
