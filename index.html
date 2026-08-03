@@ -260,34 +260,38 @@
   section[data-panel="CV"] .pub-year{ color: var(--c-cv); }
 
   /* Talks tab */
-  .talk-item{
-    display:flex;
-    gap: 18px;
-    padding: 18px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .talk-item:last-child{ border-bottom:none; }
-  .talk-tag{
-    flex-shrink:0;
-    font-size: 0.72rem;
-    font-weight:600;
-    padding: 5px 10px;
-    border-radius: 999px;
-    background: color-mix(in srgb, var(--c-talks) 14%, white);
-    color: var(--c-talks);
-    white-space:nowrap;
-    margin-top: 3px;
-  }
-  .talk-item h3{ font-size: 1.0rem; }
-  .talk-meta{ color: var(--ink-soft); font-size: 0.85rem; }
-  .talk-links{ margin-top: 8px; display:flex; gap:10px; }
-  .talk-links a{
-    font-size: 0.78rem;
-    color: var(--c-talks);
-    border-bottom: 1px solid transparent;
-  }
-  .talk-links a:hover{ border-color: var(--c-talks); }
+.talk-item{
+  display:grid;
+  grid-template-columns: auto 1fr; /* col 1 = widest tag, col 2 = content */
+  gap: 18px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.talk-item:last-child{ border-bottom:none; }
 
+.talk-tag{
+  justify-self: start;   /* don't stretch to fill the grid column */
+  width: fit-content;    /* hug the word only */
+  font-size: 0.72rem;
+  font-weight:600;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--c-talks) 14%, white);
+  color: var(--c-talks);
+  white-space:nowrap;
+  margin-top: 3px;
+}
+
+.talk-item h3{ font-size: 1.0rem; }
+.talk-meta{ color: var(--ink-soft); font-size: 0.85rem; }
+.talk-links{ margin-top: 8px; display:flex; gap:10px; }
+.talk-links a{
+  font-size: 0.78rem;
+  color: var(--c-talks);
+  border-bottom: 1px solid transparent;
+}
+.talk-links a:hover{ border-color: var(--c-talks); }
+     
   /* Teaching tab */
   .teach-grid{
     display:grid;
