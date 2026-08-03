@@ -265,7 +265,6 @@
     gap: 18px;
     padding: 18px 0;
     border-bottom: 1px solid var(--line);
-    align-items:flex-start;
   }
   .talk-item:last-child{ border-bottom:none; }
   .talk-tag{
@@ -281,6 +280,13 @@
   }
   .talk-item h3{ font-size: 1.0rem; }
   .talk-meta{ color: var(--ink-soft); font-size: 0.85rem; }
+  .talk-links{ margin-top: 8px; display:flex; gap:10px; }
+  .talk-links a{
+    font-size: 0.78rem;
+    color: var(--c-talks);
+    border-bottom: 1px solid transparent;
+  }
+  .talk-links a:hover{ border-color: var(--c-talks); }
 
   /* Teaching tab */
   .teach-grid{
@@ -529,6 +535,9 @@
         <div>
           <h3>Conformal Inference for Gene-Specific Cell Subsets in Single-Cell Differential Expression</h3>
           <div class="talk-meta">Math in May · ETH Zürich · May 2026</div>
+             <div class="talk-links">
+            <a href="https://zenodo.org/records/21770713" target="_blank" rel="noopener">Slides</a>
+          </div>
         </div>
       </div>
 
@@ -537,6 +546,9 @@
         <div>
           <h3>Conformal Inference for Gene-Specific Cell Subsets in Single-Cell Differential Expression</h3>
           <div class="talk-meta">Latsis Symposium 2026: The history of epidemics - are there lessons for the future? · ETH Zürich · February 2026</div>
+             <div class="talk-links">
+            <a href="https://zenodo.org/records/21771424" target="_blank" rel="noopener">Poster</a>
+          </div>
         </div>
       </div>
 
@@ -553,6 +565,9 @@
         <div>
           <h3>RAI Platform – Reliable AI for Biomedicine</h3>
           <div class="talk-meta">OILS25 Pitch Fest (Open Innovation in Life Sciences) · Zürich · October 2025 <br> Audience Award for Best Pitch</div>
+              <div class="talk-links">
+            <a href="https://zenodo.org/records/21771273" target="_blank" rel="noopener">Slides</a>
+          </div>
         </div>
       </div>
 
@@ -562,7 +577,9 @@
           <h3>conformeR: Conformalized differential expression analysis of multi-condition single-cell data</h3>
           <div class="talk-meta">
             European Bioconductor Conference · Barcelona · September 2025 <br>
-            <a href="https://zenodo.org/records/17105707" target="_blank" rel="noopener">Slides</a>
+              <div class="talk-links">
+              <a href="https://zenodo.org/records/17105707" target="_blank" rel="noopener">Slides</a>
+          </div>
           </div>
         </div>
       </div>
@@ -585,13 +602,13 @@
         <div class="teach-card">
           <div class="role">Teaching Assistant</div>
           <h3>STA 120 - Introduction to Statistics</h3>
-          <p>Dr. Zofia Branczuk · University of Zürich · Spring Semester/2026 · Course for Bachelor students enrolled in the Minor Program in Applied Probability and Statistics.</p>
+          <p>Dr. Zofia Branczuk · <br>University of Zürich · <br>Spring Semester/2026 · <br>Course for Bachelor students enrolled in the Minor Program in Applied Probability and Statistics.</p>
         </div>
 
         <div class="teach-card">
           <div class="role">Teaching Assistant</div>
           <h3>BIO 144 - Data Analysis in Biology</h3>
-          <p>Prof. Dr. Owen Petchey · University of Zürich · Spring Semester/2026 · R and Statistics course for Bachelor students enrolled in a Natural Sciences program.</p>
+          <p>Prof. Dr. Owen Petchey · <br>University of Zürich · <br>Spring Semester/2026 · <br>R and Statistics course for Bachelor students enrolled in a Natural Sciences program.</p>
         </div>
       </div>
     </section>
