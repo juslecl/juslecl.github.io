@@ -9,15 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- =======================================================================
-     Site styles — colors, type, and layout for the tabbed academic page.
-     1. Edit the palette in :root below to re-theme the whole site.
-     2. To publish on GitHub Pages: put this file in a repo as `index.html`,
-        then enable Pages in the repo Settings → Pages → Deploy from branch.
-     ======================================================================= -->
 <style>
 :root{
-    /* ---------- EDIT ME: palette ---------- */
+    /* palette de couleurs */
     --paper:      #FAFAF7;
     --paper-alt:  #F1F0EA;
     --ink:        #1B1B1F;
@@ -256,41 +250,11 @@
   }
   .pub-links a:hover{ border-color: var(--c-pub); }
 
-  /* CV tab reuses the .pub-item row layout, with its own accent color */
+  /* CV */
   section[data-panel="CV"] .pub-year{ color: var(--c-cv); }
 
   /* Talks tab */
-.talk-item{
-  display:grid;
-  grid-template-columns: auto 1fr; /* col 1 = widest tag, col 2 = content */
-  gap: 18px;
-  padding: 18px 0;
-  border-bottom: 1px solid var(--line);
-}
-.talk-item:last-child{ border-bottom:none; }
-
-.talk-tag{
-  justify-self: start;   /* don't stretch to fill the grid column */
-  width: fit-content;    /* hug the word only */
-  font-size: 0.72rem;
-  font-weight:600;
-  padding: 5px 10px;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--c-talks) 14%, white);
-  color: var(--c-talks);
-  white-space:nowrap;
-  margin-top: 3px;
-}
-
-.talk-item h3{ font-size: 1.0rem; }
-.talk-meta{ color: var(--ink-soft); font-size: 0.85rem; }
-.talk-links{ margin-top: 8px; display:flex; gap:10px; }
-.talk-links a{
-  font-size: 0.78rem;
-  color: var(--c-talks);
-  border-bottom: 1px solid transparent;
-}
-.talk-links a:hover{ border-color: var(--c-talks); }
+section[data-panel="talks"] .pub-year{ color: var(--c-talks); }
      
   /* Teaching tab */
   .teach-grid{
@@ -506,7 +470,6 @@
       <h2>Publications</h2>
       <p class="sub">Accepted papers</p>
 
-      <!-- Duplicate this .pub-item block for each publication -->
       <div class="pub-item">
         <div class="pub-year mono">2026</div>
         <div>
@@ -526,73 +489,78 @@
       <h2>Talks &amp; Posters</h2>
 
       <!-- Duplicate this .talk-item block for each talk -->
-      <div class="talk-item">
-        <span class="talk-tag mono">POSTER</span>
+      <div class="pub-item">
+        <span class="pub-year mono">POSTER</span>
         <div>
           <h3>Conformal Inference for Gene-Specific Cell Subsets in Single-Cell Differential Expression</h3>
-          <div class="talk-meta">Schlieren Day of Research · Schlieren · July 2026</div>
+          <div class="pub-venue mono">Schlieren Day of Research </div>
+                     <div class="pub-authors"> Schlieren, July 2026</div>
         </div>
       </div>
 
-      <div class="talk-item">
-        <span class="talk-tag mono">TALK</span>
+      <div class="pub-item">
+        <span class="pub-year mono">TALK</span>
         <div>
           <h3>Conformal Inference for Gene-Specific Cell Subsets in Single-Cell Differential Expression</h3>
-          <div class="talk-meta">Math in May · ETH Zürich · May 2026</div>
-             <div class="talk-links">
+          <div class="pub-venue mono">Math in May </div>
+             <div class="pub-authors"> ETH Zürich, May 2026</div>
+             <div class="pub-links">
             <a href="https://zenodo.org/records/21770713" target="_blank" rel="noopener">Slides</a>
           </div>
         </div>
       </div>
 
-      <div class="talk-item">
-        <span class="talk-tag mono">POSTER</span>
+      <div class="pub-item">
+        <span class="pub-year mono">POSTER</span>
         <div>
           <h3>Conformal Inference for Gene-Specific Cell Subsets in Single-Cell Differential Expression</h3>
-          <div class="talk-meta">Latsis Symposium 2026: The history of epidemics - are there lessons for the future? · ETH Zürich · February 2026</div>
-             <div class="talk-links">
+          <div class="pub-venue mono">Latsis Symposium 2026: The history of epidemics - are there lessons for the future?</div>
+             <div class="pub-authors"> ETH Zürich, February 2026</div>
+             <div class="pub-links">
             <a href="https://zenodo.org/records/21771424" target="_blank" rel="noopener">Poster</a>
           </div>
         </div>
       </div>
 
-      <div class="talk-item">
-        <span class="talk-tag mono">TALK</span>
+     <div class="pub-item">
+        <span class="pub-year mono">TALK</span>
         <div>
           <h3>Conformal Inference for Gene-Specific Cell Subsets in Single-Cell Differential Expression</h3>
           <div class="talk-meta">LS2 Annual Meeting · University of Zürich · February 2026</div>
         </div>
       </div>
 
-      <div class="talk-item">
-        <span class="talk-tag mono">TALK</span>
+     <div class="pub-item">
+        <span class="pub-year mono">TALK</span>
         <div>
           <h3>RAI Platform – Reliable AI for Biomedicine</h3>
-          <div class="talk-meta">OILS25 Pitch Fest (Open Innovation in Life Sciences) · Zürich · October 2025 <br> Audience Award for Best Pitch</div>
-              <div class="talk-links">
+          <div class="pub-venue mono">OILS25 Pitch Fest (Open Innovation in Life Sciences) </div>
+          <div class="pub-authors"> University of Zurich, October 2025 <br> Audience Award for Best Pitch </div>
+              <div class="pub-links">
             <a href="https://zenodo.org/records/21771273" target="_blank" rel="noopener">Slides</a>
           </div>
         </div>
       </div>
 
-      <div class="talk-item">
-        <span class="talk-tag mono">TALK</span>
+     <div class="pub-item">
+        <span class="pub-year mono">TALK</span>
         <div>
           <h3>conformeR: Conformalized differential expression analysis of multi-condition single-cell data</h3>
-          <div class="talk-meta">
-            European Bioconductor Conference · Barcelona · September 2025 <br>
-              <div class="talk-links">
+          <div class="pub-venue mono">
+            European Bioconductor Conference   </div>
+                <div class="pub-authors">Barcelona, September 2025 </div>
+              <div class="pub-links">
               <a href="https://zenodo.org/records/17105707" target="_blank" rel="noopener">Slides</a>
-          </div>
           </div>
         </div>
       </div>
 
-      <div class="talk-item">
-        <span class="talk-tag mono">TALK</span>
+     <div class="pub-item">
+        <span class="pub-year mono">TALK</span>
         <div>
           <h3>RAI Platform – Reliable AI for Biomedicine</h3>
-          <div class="talk-meta">PhD Summer Conference: Legal, Ethical and Implementation Challenges of AI in Healthcare · Digital Society Initiative, University of Zürich · June 2025</div>
+          <div class="pub-venue mono"> PhD Summer Conference: Legal, Ethical and Implementation Challenges of AI in Healthcare </div>
+         <div class="pub-authors"> Digital Society Initiative, University of Zürich, June 2025</div>
         </div>
       </div>
 
