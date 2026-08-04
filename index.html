@@ -251,7 +251,9 @@
   .pub-links a:hover{ border-color: var(--c-pub); }
 
   /* CV */
-  section[data-panel="CV"] .pub-year{ color: var(--c-cv); }
+section[data-panel="CV"] .pub-year{ color: var(--c-cv); }
+section[data-panel="CV"] .pub-links a{ color: var(--c-cv); }
+section[data-panel="CV"] .pub-links a:hover{ border-color: var(--c-cv); }
 
 /* Talks tab */
 section[data-panel="talks"] .pub-year{ color: var(--c-talks); }
@@ -406,6 +408,10 @@ section[data-panel="talks"] .pub-links a:hover{ border-color: var(--c-talks); }
     <!-- ---------- CV ---------- -->
     <section class="panel" data-panel="CV">
       <h2>Curriculum Vitae</h2>
+    <div class="pub-links">
+            <a href="CV.pdf" target="_blank" rel="noopener">Download my CV (PDF)</a>
+          </div>
+        
       <p class="sub">Education</p>
 
       <div class="pub-item">
